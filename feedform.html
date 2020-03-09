@@ -46,7 +46,7 @@ input[type=submit]:hover {
 </style>
 </head>
 <body>
-<form method="post" action="Feedbackjsp.jsp">
+<form method="post" action="/Feedbackjsp.jsp" onsubmit="myFunction()">
 <center>
 <img src="digi.png" height="100" width="200"></center><br>
 <h1 align=center>Feedback Form</h1>
@@ -59,11 +59,11 @@ input[type=submit]:hover {
   Camera Quality: 
   <div class="flex.container">
   <label class="radio-inline">
-  <input type="radio" id="poor" value="1" name="rating1">Poor
-  <input type="radio" id="average" value="2" name="rating1">Average
-  <input type="radio" id="satisfactory" value="3" name="rating1">Satisfactory
-  <input type="radio" id="good" value="4" name="rating1">Good
-  <input type="radio" id="excellent" value="5" name="rating1">Excellent<br><br>
+  <input type="radio" id="poor1" value="1" name="rating1">Poor
+  <input type="radio" id="average1" value="2" name="rating1">Average
+  <input type="radio" id="satisfactory1" value="3" name="rating1">Satisfactory
+  <input type="radio" id="good1" value="4" name="rating1">Good
+  <input type="radio" id="excellent1" value="5" name="rating1">Excellent<br><br>
   <label id="ratVal1"></label>
   </div>
   
@@ -71,11 +71,11 @@ input[type=submit]:hover {
   
   Display Quality: 
   <div class="flex.container">
-  <input type="radio" id="poor" value="1" name="rating2">Poor
-  <input type="radio" id="average" value"2" name="rating2">Average
-  <input type="radio" id="satisfactory" value="3" name="rating2">Satisfactory
-  <input type="radio" id="Good" value="4" name="rating2">Good
-  <input type="radio" id="excellent" value="5" name="rating2">Excellent<br><br>
+  <input type="radio" id="poor2" value="1" name="rating2">Poor
+  <input type="radio" id="average2" value"2" name="rating2">Average
+  <input type="radio" id="satisfactory2" value="3" name="rating2">Satisfactory
+  <input type="radio" id="Good2" value="4" name="rating2">Good
+  <input type="radio" id="excellent2" value="5" name="rating2">Excellent<br><br>
   <label id="ratVal2"></label>
   </div>
 
@@ -83,11 +83,11 @@ input[type=submit]:hover {
   
   Sound Quality: 
   <div class="flex.container">
-  <input type="radio" id="poor" name="rating3">Poor
-  <input type="radio" id="average" name="rating3">Average
-  <input type="radio" id="satisfactory" value="3" name="rating3">Satisfactory
-  <input type="radio" id="Good" name="rating3">Good
-  <input type="radio" id="excellent" value="5" name="rating3">Excellent<br><br>
+  <input type="radio" id="poor3" value="1" name="rating3">Poor
+  <input type="radio" id="average3" value="2" name="rating3">Average
+  <input type="radio" id="satisfactory3" value="3" name="rating3">Satisfactory
+  <input type="radio" id="Good3" value="4" name="rating3">Good
+  <input type="radio" id="excellent3" value="5" name="rating3">Excellent<br><br>
   <label id="ratVal3"></label>
   </div>
 
@@ -95,25 +95,38 @@ input[type=submit]:hover {
   
   Value for Money: 
   <div class="flex.container">
-  <input type="radio" id="poor" name="rating4">Poor
-  <input type="radio" id="average" name="rating4">Average
-  <input type="radio" id="satisfactory" value="3" name="rating4">Satisfactory
-  <input type="radio" id="Good" name="rating4">Good
-  <input type="radio" id="excellent" value="5" name="rating4">Excellent<br><br>
+  <input type="radio" id="poor4" value="1" name="rating4">Poor
+  <input type="radio" id="average4" value="2" name="rating4">Average
+  <input type="radio" id="satisfactory4" value="3" name="rating4">Satisfactory
+  <input type="radio" id="Good4" value="4" name="rating4">Good
+  <input type="radio" id="excellent4" value="5" name="rating4">Excellent<br><br>
   <label id="ratVal4"></label>
   </div>
 
-    <h2><label for="title">Title:</label></h2>
-    <input type="text" id="title" name="title" placeholder="Sum up your review in one line"><br><br>
+    <h2><label for="title" >Title:</label></h2>
+    <input type="text" id="title" name="title" placeholder="Sum up your review in one line" required><br><br>
 
     <h2>Review:</h2>
-    <textarea name="feedbacktext" id="text" rows="20" cols="10" placeholder="Please tell us what you like and dislike about the product"></textarea>
+    <textarea name="feedbacktext" id="text" rows="10" cols="10" placeholder="Please tell us what you like and dislike about the product"></textarea>
 
+	
+	
+	
+	
    <center> 
    <input type="submit" value="Submit">
+   
+   
    </center>
 
 </div>
 </form>
+
+<script>
+function myFunction()
+{
+alert("Your feedback is succesfully submitted.");
+}
+</script>
 </body>
 </html>
