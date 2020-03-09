@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: dodgerblue;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+
+      .flex-container {
+        display: flex;
+        align-items: center; 
+        width: 100%;
+        height: 50px;
+        
+      }
+</style>
+</head>
+<body>
+<form method="post" action="Feedbackjsp.jsp">
+<center>
+<img src="digi.png" height="100" width="200"></center><br>
+<h1 align=center>Feedback Form</h1>
+
+<div class="container">
+  
+  <h2>Feedback by Feature</h2>
+ 
+  
+  Camera Quality: 
+  <div class="flex.container">
+  <label class="radio-inline">
+  <input type="radio" id="poor" value="1" name="rating1">Poor
+  <input type="radio" id="average" value="2" name="rating1">Average
+  <input type="radio" id="satisfactory" value="3" name="rating1">Satisfactory
+  <input type="radio" id="good" value="4" name="rating1">Good
+  <input type="radio" id="excellent" value="5" name="rating1">Excellent<br><br>
+  <label id="ratVal1"></label>
+  </div>
+  
+ 
+  
+  Display Quality: 
+  <div class="flex.container">
+  <input type="radio" id="poor" value="1" name="rating2">Poor
+  <input type="radio" id="average" value"2" name="rating2">Average
+  <input type="radio" id="satisfactory" value="3" name="rating2">Satisfactory
+  <input type="radio" id="Good" value="4" name="rating2">Good
+  <input type="radio" id="excellent" value="5" name="rating2">Excellent<br><br>
+  <label id="ratVal2"></label>
+  </div>
+
+  
+  
+  Sound Quality: 
+  <div class="flex.container">
+  <input type="radio" id="poor" name="rating3">Poor
+  <input type="radio" id="average" name="rating3">Average
+  <input type="radio" id="satisfactory" value="3" name="rating3">Satisfactory
+  <input type="radio" id="Good" name="rating3">Good
+  <input type="radio" id="excellent" value="5" name="rating3">Excellent<br><br>
+  <label id="ratVal3"></label>
+  </div>
+
+  
+  
+  Value for Money: 
+  <div class="flex.container">
+  <input type="radio" id="poor" name="rating4">Poor
+  <input type="radio" id="average" name="rating4">Average
+  <input type="radio" id="satisfactory" value="3" name="rating4">Satisfactory
+  <input type="radio" id="Good" name="rating4">Good
+  <input type="radio" id="excellent" value="5" name="rating4">Excellent<br><br>
+  <label id="ratVal4"></label>
+  </div>
+
+    <h2><label for="title">Title:</label></h2>
+    <input type="text" id="title" name="title" placeholder="Sum up your review in one line"><br><br>
+
+    <h2>Review:</h2>
+    <textarea name="feedbacktext" id="text" rows="20" cols="10" placeholder="Please tell us what you like and dislike about the product"></textarea>
+
+   <center> 
+   <input type="submit" value="Submit">
+   </center>
+
+</div>
+</form>
+</body>
+</html>
